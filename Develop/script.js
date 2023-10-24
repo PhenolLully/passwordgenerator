@@ -23,13 +23,13 @@ console.log(getRandomElementFromArray(['?,', '/', '$']));
 
 function generatePassword() {
   var password=""; 
-  var char= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+  var charSet= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
                'abcdefghijklmnopqrstuvwxyz0123456789#$';
                
   for (var i=0; i<=8; i++) {
-    var char = Math.floor(Math.random()
-    * char.length + 1);
-    password += (char)
+    var randomIndex= Math.floor(Math.random()
+    * charSet.length + 1);
+    password += charSet.charAt(randomIndex)
   }
   return password;
     
