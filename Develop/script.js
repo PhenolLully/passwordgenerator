@@ -22,19 +22,19 @@ console.log(getRandomElementFromArray([1,2,7,9,10]));
 console.log(getRandomElementFromArray(['?,', '/', '$']));
 
 function generatePassword() {
-  var char= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'+
-               'abcdefghijklmnopqrstuvwxyz0123456789#$';
   var password=""; 
+  var char= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+               'abcdefghijklmnopqrstuvwxyz0123456789#$';
+               
   for (var i=0; i<=8; i++) {
-    
-    
-
-
-    return password;
+    var char = Math.floor(Math.random()
+    * char.length + 1);
+    password += (char)
   }
-
+  return password;
     
 }
+console.log(generatePassword());
 
 
 
